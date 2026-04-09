@@ -1,0 +1,25 @@
+# 核心依赖（全部验证过，无兼容问题）
+langchain==0.1.17
+langchain-core==0.1.52
+langchain-community==0.0.38
+langchain-openai==0.1.7
+langchain-text-splitters==0.0.1
+faiss-cpu==1.8.0.post1
+PyPDF2==3.0.1
+gradio==3.48.0
+ollama==0.2.0
+numpy==1.26.4
+
+# 新增依赖（RAGAS 评测 + Arxiv）
+ragas==0.1.10
+datasets==2.14.0
+arxiv==2.1.0
+
+# 版本限制（确保兼容性）
+starlette<1.0.0
+numpy<2.0
+jinja2<3.1.0
+pandas>=2.0.0,<2.1.0
+pyarrow>=10.0.0,<12.0.0
+
+langchain-openai==0.1.7
