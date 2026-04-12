@@ -49,16 +49,16 @@ class FaissManager:
             self.db.add_documents(documents)
             self.db.save_local(self.index_path)
 
-    def similarity_search(self, query):
-        """相似性检索"""
-        if not self.embeddings:
-            raise Exception("请先初始化嵌入模型！")
+    # def similarity_search(self, query):
+    #     """相似性检索"""
+    #     if not self.embeddings:
+    #         raise Exception("请先初始化嵌入模型！")
         
-        if not self.db:
-            self.load_or_create_db()
-        if not self.db:
-            return []
-        return self.db.similarity_search(query, k=self.top_k)
+    #     if not self.db:
+    #         self.load_or_create_db()
+    #     if not self.db:
+    #         return []
+    #     return self.db.similarity_search(query, k=self.top_k)
 
 # 单例实例
 faiss_manager = FaissManager()
